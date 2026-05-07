@@ -1,0 +1,247 @@
+{
+  "base": {
+    "Dormitory": {
+      "spawn_prob": 0.04
+    },
+    "Teaching": {
+      "spawn_prob": 0.04
+    },
+    "Canteen": {
+      "spawn_prob": 0.025
+    },
+    "Library": {
+      "spawn_prob": 0.025
+    },
+    "Gate_N1": {
+      "spawn_prob": 0.015
+    },
+    "Gate_N2": {
+      "spawn_prob": 0.015
+    },
+    "Gate_E": {
+      "spawn_prob": 0.015
+    },
+    "Gate_E1": {
+      "spawn_prob": 0.015
+    },
+    "Gate_E3": {
+      "spawn_prob": 0.015
+    },
+    "Gate_S": {
+      "spawn_prob": 0.015
+    },
+    "Gate_S2": {
+      "spawn_prob": 0.015
+    },
+    "Closed": {
+      "spawn_prob": 0.0
+    }
+  },
+  "to_class_peak": {
+    "Dormitory": {
+      "delta_prob": 0.18
+    },
+    "Teaching": {
+      "delta_prob": -0.04
+    },
+    "Canteen": {
+      "delta_prob": -0.01
+    },
+    "Library": {
+      "delta_prob": -0.01
+    },
+    "Gate_N1": {
+      "delta_prob": 0.02
+    },
+    "Gate_N2": {
+      "delta_prob": 0.02
+    },
+    "Gate_E": {
+      "delta_prob": 0.02
+    },
+    "Gate_E1": {
+      "delta_prob": 0.02
+    },
+    "Gate_E3": {
+      "delta_prob": 0.02
+    },
+    "Gate_S": {
+      "delta_prob": 0.02
+    },
+    "Gate_S2": {
+      "delta_prob": 0.02
+    }
+  },
+  "after_class_peak": {
+    "Teaching": {
+      "delta_prob": 0.18
+    },
+    "Dormitory": {
+      "delta_prob": -0.02
+    },
+    "Canteen": {
+      "delta_prob": -0.02
+    },
+    "Library": {
+      "delta_prob": 0.01
+    },
+    "Gate_N1": {
+      "delta_prob": 0.02
+    },
+    "Gate_N2": {
+      "delta_prob": 0.02
+    },
+    "Gate_E": {
+      "delta_prob": 0.02
+    },
+    "Gate_E1": {
+      "delta_prob": 0.02
+    },
+    "Gate_E3": {
+      "delta_prob": 0.02
+    },
+    "Gate_S": {
+      "delta_prob": 0.02
+    },
+    "Gate_S2": {
+      "delta_prob": 0.02
+    }
+  },
+  "evening_study_start": {
+    "Dormitory": {
+      "delta_prob": 0.15
+    },
+    "Canteen": {
+      "delta_prob": 0.04
+    },
+    "Teaching": {
+      "delta_prob": -0.03
+    },
+    "Library": {
+      "delta_prob": -0.01
+    },
+    "Gate_N1": {
+      "delta_prob": 0.01
+    },
+    "Gate_N2": {
+      "delta_prob": 0.01
+    },
+    "Gate_E": {
+      "delta_prob": 0.01
+    },
+    "Gate_E1": {
+      "delta_prob": 0.01
+    },
+    "Gate_E3": {
+      "delta_prob": 0.01
+    },
+    "Gate_S": {
+      "delta_prob": 0.01
+    },
+    "Gate_S2": {
+      "delta_prob": 0.01
+    }
+  },
+  "evening_study_end": {
+    "Teaching": {
+      "delta_prob": 0.18
+    },
+    "Library": {
+      "delta_prob": 0.12
+    },
+    "Dormitory": {
+      "delta_prob": -0.03
+    },
+    "Canteen": {
+      "delta_prob": -0.01
+    },
+    "Gate_N1": {
+      "delta_prob": 0.02
+    },
+    "Gate_N2": {
+      "delta_prob": 0.02
+    },
+    "Gate_E": {
+      "delta_prob": 0.02
+    },
+    "Gate_E1": {
+      "delta_prob": 0.02
+    },
+    "Gate_E3": {
+      "delta_prob": 0.02
+    },
+    "Gate_S": {
+      "delta_prob": 0.02
+    },
+    "Gate_S2": {
+      "delta_prob": 0.02
+    }
+  },
+  "timeline": [
+    {
+      "start": "06:00",
+      "end": "08:05",
+      "scenario": "base"
+    },
+    {
+      "start": "08:05",
+      "end": "08:30",
+      "scenario": "to_class_peak"
+    },
+    {
+      "start": "08:30",
+      "end": "12:00",
+      "scenario": "base"
+    },
+    {
+      "start": "12:00",
+      "end": "12:30",
+      "scenario": "after_class_peak"
+    },
+    {
+      "start": "12:30",
+      "end": "14:05",
+      "scenario": "base"
+    },
+    {
+      "start": "14:05",
+      "end": "14:30",
+      "scenario": "to_class_peak"
+    },
+    {
+      "start": "14:30",
+      "end": "17:50",
+      "scenario": "base"
+    },
+    {
+      "start": "17:50",
+      "end": "18:20",
+      "scenario": "after_class_peak"
+    },
+    {
+      "start": "18:20",
+      "end": "18:55",
+      "scenario": "base"
+    },
+    {
+      "start": "18:55",
+      "end": "19:20",
+      "scenario": "evening_study_start"
+    },
+    {
+      "start": "19:20",
+      "end": "21:00",
+      "scenario": "evening_study_calm"
+    },
+    {
+      "start": "21:00",
+      "end": "21:25",
+      "scenario": "evening_study_end"
+    },
+    {
+      "start": "21:25",
+      "end": "22:30",
+      "scenario": "base"
+    }
+  ]
+}

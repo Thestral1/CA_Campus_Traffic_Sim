@@ -1,0 +1,147 @@
+{
+  "time_settings": {
+    "start_time": "06:00",
+    "end_time": "22:30",
+    "seconds_per_tick": 2.25
+  },
+  "base": {
+    "description": "非高峰（课间、午后、晚间等低活动时段）",
+    "Dormitory": { "spawn_prob": 0.04 },
+    "Teaching":  { "spawn_prob": 0.04 },
+    "Canteen":   { "spawn_prob": 0.025 },
+    "Library":   { "spawn_prob": 0.025 },
+    "Gate_N1":   { "spawn_prob": 0.015 },
+    "Gate_N2":   { "spawn_prob": 0.015 },
+    "Gate_E":    { "spawn_prob": 0.015 },
+    "Gate_E1":   { "spawn_prob": 0.015 },
+    "Gate_E3":   { "spawn_prob": 0.015 },
+    "Gate_S":    { "spawn_prob": 0.015 },
+    "Gate_S2":   { "spawn_prob": 0.015 },
+    "Closed":    { "spawn_prob": 0.0 }
+  },
+  "to_class_peak_short": {
+    "description": "短时上课高峰（晚自习开始）",
+    "Dormitory": { "delta_prob": 0.18 },
+    "Teaching":  { "delta_prob": -0.04 },
+    "Canteen":   { "delta_prob": -0.01 },
+    "Library":   { "delta_prob": -0.01 },
+    "Gate_N1":   { "delta_prob": 0.02 },
+    "Gate_N2":   { "delta_prob": 0.02 },
+    "Gate_E":    { "delta_prob": 0.02 },
+    "Gate_E1":   { "delta_prob": 0.02 },
+    "Gate_E3":   { "delta_prob": 0.02 },
+    "Gate_S":    { "delta_prob": 0.02 },
+    "Gate_S2":   { "delta_prob": 0.02 }
+  },
+  "to_class_peak_extend": {
+    "description": "错峰上课高峰（早晨、下午）",
+    "Dormitory": { "delta_prob": 0.08 },
+    "Teaching":  { "delta_prob": -0.02 },
+    "Canteen":   { "delta_prob": -0.005 },
+    "Library":   { "delta_prob": -0.005 },
+    "Gate_N1":   { "delta_prob": 0.01 },
+    "Gate_N2":   { "delta_prob": 0.01 },
+    "Gate_E":    { "delta_prob": 0.01 },
+    "Gate_E1":   { "delta_prob": 0.01 },
+    "Gate_E3":   { "delta_prob": 0.01 },
+    "Gate_S":    { "delta_prob": 0.01 },
+    "Gate_S2":   { "delta_prob": 0.01 }
+  },
+  "after_class_peak_short": {
+    "description": "短时下课高峰（晚自习结束）",
+    "Teaching":  { "delta_prob": 0.18 },
+    "Dormitory": { "delta_prob": -0.02 },
+    "Canteen":   { "delta_prob": -0.02 },
+    "Library":   { "delta_prob": 0.01 },
+    "Gate_N1":   { "delta_prob": 0.02 },
+    "Gate_N2":   { "delta_prob": 0.02 },
+    "Gate_E":    { "delta_prob": 0.02 },
+    "Gate_E1":   { "delta_prob": 0.02 },
+    "Gate_E3":   { "delta_prob": 0.02 },
+    "Gate_S":    { "delta_prob": 0.02 },
+    "Gate_S2":   { "delta_prob": 0.02 }
+  },
+  "after_class_peak_extend": {
+    "description": "错峰下课高峰（上午、下午）",
+    "Teaching":  { "delta_prob": 0.09 },
+    "Dormitory": { "delta_prob": -0.01 },
+    "Canteen":   { "delta_prob": -0.01 },
+    "Library":   { "delta_prob": 0.005 },
+    "Gate_N1":   { "delta_prob": 0.01 },
+    "Gate_N2":   { "delta_prob": 0.01 },
+    "Gate_E":    { "delta_prob": 0.01 },
+    "Gate_E1":   { "delta_prob": 0.01 },
+    "Gate_E3":   { "delta_prob": 0.01 },
+    "Gate_S":    { "delta_prob": 0.01 },
+    "Gate_S2":   { "delta_prob": 0.01 }
+  },
+  "evening_study_start": {
+    "description": "晚自习开始（宿舍、食堂 → 教学楼、图书馆）",
+    "Dormitory": { "delta_prob": 0.18 },
+    "Canteen":   { "delta_prob": 0.04 },
+    "Teaching":  { "delta_prob": -0.03 },
+    "Library":   { "delta_prob": -0.01 },
+    "Gate_N1":   { "delta_prob": 0.02 },
+    "Gate_N2":   { "delta_prob": 0.02 },
+    "Gate_E":    { "delta_prob": 0.02 },
+    "Gate_E1":   { "delta_prob": 0.02 },
+    "Gate_E3":   { "delta_prob": 0.02 },
+    "Gate_S":    { "delta_prob": 0.02 },
+    "Gate_S2":   { "delta_prob": 0.02 }
+  },
+  "evening_study_calm": {
+    "description": "晚自习期间（极低活动）",
+    "Dormitory": { "delta_prob": -0.01 },
+    "Teaching":  { "delta_prob": -0.01 },
+    "Canteen":   { "delta_prob": -0.005 },
+    "Library":   { "delta_prob": -0.008 },
+    "Gate_N1":   { "delta_prob": -0.003 },
+    "Gate_N2":   { "delta_prob": -0.003 },
+    "Gate_E":    { "delta_prob": -0.003 },
+    "Gate_E1":   { "delta_prob": -0.003 },
+    "Gate_E3":   { "delta_prob": -0.003 },
+    "Gate_S":    { "delta_prob": -0.003 },
+    "Gate_S2":   { "delta_prob": -0.003 }
+  },
+  "evening_study_end": {
+    "description": "晚自习结束（教学楼、图书馆 → 宿舍）",
+    "Teaching":  { "delta_prob": 0.18 },
+    "Library":   { "delta_prob": 0.12 },
+    "Dormitory": { "delta_prob": -0.03 },
+    "Canteen":   { "delta_prob": -0.01 },
+    "Gate_N1":   { "delta_prob": 0.02 },
+    "Gate_N2":   { "delta_prob": 0.02 },
+    "Gate_E":    { "delta_prob": 0.02 },
+    "Gate_E1":   { "delta_prob": 0.02 },
+    "Gate_E3":   { "delta_prob": 0.02 },
+    "Gate_S":    { "delta_prob": 0.02 },
+    "Gate_S2":   { "delta_prob": 0.02 }
+  },
+  "timeline": [
+    { "start": "06:00", "end": "07:50", "scenario": "base" },
+
+    { "start": "07:50", "end": "08:45", "scenario": "to_class_peak_extend" },
+
+    { "start": "08:45", "end": "10:40", "scenario": "base" },
+
+    { "start": "10:40", "end": "11:30", "scenario": "after_class_peak_extend" },
+
+    { "start": "11:30", "end": "13:50", "scenario": "base" },
+
+    { "start": "13:50", "end": "14:40", "scenario": "to_class_peak_extend" },
+
+    { "start": "14:40", "end": "16:35", "scenario": "base" },
+
+    { "start": "16:35", "end": "17:25", "scenario": "after_class_peak_extend" },
+
+    { "start": "17:25", "end": "18:50", "scenario": "base" },
+
+    { "start": "18:50", "end": "19:20", "scenario": "evening_study_start" },
+
+    { "start": "19:20", "end": "21:00", "scenario": "evening_study_calm" },
+
+    { "start": "21:00", "end": "21:25", "scenario": "evening_study_end" },
+
+    { "start": "21:25", "end": "22:30", "scenario": "base" }
+  ]
+}
