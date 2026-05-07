@@ -301,8 +301,6 @@ def load_data(output_dir):
 # ==========================================
 class Simulation:
     def __init__(self, edges, config):
-        BORROW_FWD_BASE = 100
-        BORROW_REV_BASE = 200
         self.edges = edges
         self.all_config = config  # 保存完整配置供时间轴使用
         self.base_config = config.get('base', {})
@@ -659,11 +657,9 @@ class Simulation:
             if self.grids[eid][l][0] == 0:
                 self.grids[eid][l][0] = speed
     def _lane_change_segment(self, grid, seg):
-        # """在路段网格上执行换道，包括同向和可选的对向借道（借道写入标记）"""
-        # 常量
+        # 执行换道，包括同向和可选的对向借道
         BORROW_FWD_BASE = 100
         BORROW_REV_BASE = 200
-
         cells = seg['cells']
         total_lanes = seg['total_lanes']
         fwd_lanes = seg['fwd_lanes']
@@ -691,7 +687,6 @@ class Simulation:
                         if grid[l][i] == 0: gap_cur += 1
                         else: break
                 if gap_cur >= desired: continue
-
                 # 同向换道
                 targets = []
                 if l > min(my_lanes): targets.append(l - 1)
@@ -712,8 +707,7 @@ class Simulation:
                         grid[tl][c] = v
                         grid[l][c] = 0
                         break
-
-                # 对向借道超车（is_flex=1 且允许时），写入带标记的速度
+                # 对向借道超车
                 if seg['is_flex'] == 1:
                     if dir == 1 and l == fwd_lanes - 1:
                         tl = fwd_lanes
@@ -726,7 +720,7 @@ class Simulation:
                     else:
                         target_c = cells - 1 - c
                     if target_c < 0 or target_c >= cells: continue
-                    back_safe = True  # 简化
+                    back_safe = True
                     if grid[tl][target_c] == 0 and back_safe:
                         if dir == 1:
                             grid[tl][target_c] = BORROW_FWD_BASE + v
